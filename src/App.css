@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald&family=Poppins&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__header-image {
+    object-fit: contain;
+    margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header {
+    background-color: white;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app {
+    background-color: #fafafa;
+    padding-top: 65px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__signup {
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__posts {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts__container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.auth__container {
+    min-width: 400px;
+}
+
+.preview__image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search__bar {
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 4px 4px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid lightgray;
+    margin: auto;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.options img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.auth__options {
+    margin: auto;
+    font-size: 24px;
+    display: flex;
+    gap: 24px;
+    transition: all 400ms ease;
+}
+
+.auth__options:hover {
+    font-size: 28px
+}
+
+
+.icon {
+    cursor: pointer;
+}
+
+.upload {
+    text-align: center;
+}
+
+.logout {
+    padding-block: 10px;
+    width: 100px;
+    position: fixed;
+    top: 70px;
+    right: 10%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logout__option {
+    width: 100%;
+    padding: 10px;
+    transition: all 400ms ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout__option:hover {
+    background-color: lightgray;
+}
+
+@media screen and (max-width:768px) {
+
+    .auth__options,
+    .search__bar,
+    .suggested {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .search__bar {
+        display: none;
+    }
 }
